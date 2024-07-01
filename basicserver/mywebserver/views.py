@@ -9,7 +9,7 @@ def get_location(ip):
         return 'Unknown'
 
 def greet_visitor(request):
-    visitor_name = request.GET.get('visitorname', 'Visitor')
+    visitor_name = request.GET.get('visitor_name', 'Visitor')
     client_ip = request.META.get('REMOTE_ADDR')
     location = get_location(client_ip)
     response = {
